@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+
+<style>
+@charset "utf8";
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
+
+:root {
+    font-size: calc(1vw + 1vh);
+}
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	height: 100%;
+}
+
+html {
+  background-color: black;
+  color: white;
+  font: 700 1rem/1.618 'Oswald', sans-serif;
+  /*background-image: url('https://media.giphy.com/media/JNy7DzgqUnh9p93aru/giphy.gif');*/
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#zoom {
+  flex: 1;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+#zoom span {
+  display: block;
+  font-size: 1.5rem;
+  opacity: .8;
+}
+
+#zoom div {
+  position: fixed;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+}
+
+#zoom div { opacity: 0; }
+
+#zoom div:nth-child(1) { animation: zoom 24s linear 0s forwards; }
+#zoom div:nth-child(2) { animation: zoom 24s linear 4s forwards; }
+
+
+@keyframes zoom {
+    0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+    5% { opacity: 1;filter: blur(0); transform:scale(1)}
+    10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+    20% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+    75% { opacity: 0}
+    100% { opacity: 0}
+}
+
+#greetings {
+  font-size: 2rem;
+  flex-direction: column;
+  /*text-transform: uppercase;*/
+}
+
+#greetings div {
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+#greetings div:nth-child(1) {
+  zoom: 200%;
+  margin-bottom: .5rem;
+  animation: appear 4s normal 5s forwards;
+}
+
+#greetings div:nth-child(2) { animation: appear 4s normal 6s forwards; }
+#greetings div:nth-child(3) { animation: appear 4s normal 7s forwards; }
+#greetings div:nth-child(4) { animation: appear 4s normal 8s forwards; }
+#greetings div:nth-child(5) { animation: appear 4s normal 9s forwards; }
+#greetings div:nth-child(6) { animation: appear 4s normal 10s forwards; }
+#greetings div:nth-child(7) { animation: appear 4s normal 11s forwards;   margin-top: 1rem;}
+
+@keyframes appear {
+    0% { opacity: 0}
+    100% { opacity: 1}
+}
+
+b {
+  zoom: 150%;
+  color: red;
+  text-shadow:
+   -1px -1px 0 white,
+    1px -1px 0 white,
+   -1px 1px 0 white, 
+    1px 1px 0 white;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  text-shadow:
+   -1px -1px 0 darkgrey,
+    1px -1px 0 darkgrey,
+   -1px 1px 0 darkgrey,
+    1px 1px 0 darkgrey;
+}
+
+a:hover {
+  text-shadow:
+   -1px -1px 0 white,
+    1px -1px 0 white,
+   -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+</style>
+<body>
+
+<section id="zoom">  
+  <div>Let’s<span>keep it real!</span></div>
+</section>
+<section id="greetings">
+  <div>ABOUT US</div>
+  <div>Let’s keep it real in <em>Reel Deal!</em></div>
+  <div>We aim to reach out to cinephiles,</div>
+  <div>so they could come together <br>and give their collective input towards the cinema <br> and build a recommendation culture.</div>
+  <div>Our prime focus will be to review <br> and appreciate movies with integrity and unbiased opinion.<br> That would help create a guide<br> for people seeking for recommendations.</div>
+</br>
+  <div></em>@copperknicuss</em></div>
+</section>
+
+</body>
+</html>
